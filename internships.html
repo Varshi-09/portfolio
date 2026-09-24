@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internships - Bhagya Varshini</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(to bottom right,#e0eafc,#cfdef3);
+      color:#333;
+      overflow-x:hidden;
+    }
+
+    #particles-js{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      z-index:-1;
+    }
+
+    nav{
+      background:linear-gradient(to right,#3b82f6,#60a5fa);
+      color:#fff;
+      padding:1rem 2rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:100;
+      box-shadow:0 2px 5px rgba(0,0,0,.1);
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:white;
+      margin:0 12px;
+      font-weight:600;
+      position:relative;
+    }
+
+    .nav-links a:hover{
+      color:#facc15;
+    }
+
+    .nav-links a.active::after{
+      content:'';
+      position:absolute;
+      bottom:-6px;
+      left:0;
+      width:100%;
+      height:3px;
+      background:#facc15;
+      border-radius:5px;
+    }
+
+    h1{
+      text-align:center;
+      color:#0340a1;
+      margin:35px 0;
+      font-size:2.5rem;
+    }
+
+    .internships-section{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:30px;
+      padding:20px;
+    }
+
+    .internship-card{
+      background:white;
+      width:320px;
+      padding:22px;
+      border-radius:15px;
+      box-shadow:0 6px 15px rgba(0,0,0,.12);
+      transition:.3s;
+    }
+
+    .internship-card:hover{
+      transform:translateY(-8px);
+      background:#e0f2fe;
+    }
+
+    .internship-card h3{
+      margin-bottom:12px;
+      line-height:1.4;
+    }
+
+    .company-link{
+      text-decoration:none;
+      color:#3b82f6;
+      transition:.3s;
+    }
+
+    .company-link:hover{
+      color:#facc15;
+      text-decoration:underline;
+    }
+
+    .internship-card p{
+      font-size:.95rem;
+      margin-bottom:15px;
+      line-height:1.6;
+    }
+
+    .tag{
+      display:inline-block;
+      background:#e0f2fe;
+      color:#0284c7;
+      padding:5px 12px;
+      border-radius:20px;
+      font-size:.8rem;
+      margin-bottom:15px;
+    }
+
+    .certificate-link{
+      display:inline-block;
+      margin-top:10px;
+      color:#fff;
+      background:#2563eb;
+      text-decoration:none;
+      padding:10px 18px;
+      border-radius:8px;
+      transition:.3s;
+      font-weight:600;
+    }
+
+    .certificate-link:hover{
+      background:#1d4ed8;
+    }
+
+    .arrow-container{
+      display:flex;
+      justify-content:flex-end;
+      margin:35px;
+    }
+
+    .arrow{
+      text-decoration:none;
+      color:#3b82f6;
+      background:#e0f2ff;
+      padding:12px 15px;
+      border-radius:50%;
+      margin-left:10px;
+      transition:.3s;
+      font-size:20px;
+    }
+
+    .arrow:hover{
+      background:#3b82f6;
+      color:#facc15;
+      transform:scale(1.15);
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      .nav-links{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .internship-card{
+        width:100%;
+      }
+
+    }
+
+  </style>
+
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<nav>
+
+<div><strong>BHAGYA VARSHINI DANGETI</strong></div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="skills.html">Skills</a>
+<a href="projects.html">Projects</a>
+<a href="internships.html" class="active">Internships</a>
+<a href="certifications.html">Certifications</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</nav>
+
+<h1>My Internships</h1>
+
+<div class="internships-section">
+
+<div class="internship-card">
+
+<h3>
+<a class="company-link"
+href="https://www.karthikeyasolutions.com/"
+target="_blank">
+WEB DEVELOPMENT Intern - Karthikeya Software Solutions
+</a>
+</h3>
+
+<p>
+Developed responsive UI using HTML, CSS, and JavaScript, and contributed to live project deployment.
+</p>
+
+<span class="tag">Frontend</span>
+
+<br>
+
+<a class="certificate-link"
+href="https://drive.google.com/file/d/1WcmTKfeFPLe03L5cf_0flbJxtjnv9Rf3/view?usp=drive_link"
+target="_blank">
+View Certificate
+</a>
+
+</div>
+
+<div class="internship-card">
+
+<h3>
+<a class="company-link"
+href="https://datavalley.ai"
+target="_blank">
+CLOUD ENGINEERING & DEVOPS Intern - Data Valley IT Solutions
+</a>
+</h3>
+
+<p>
+Worked on deploying and managing cloud applications, built automation tools and generated analysis reports.
+</p>
+
+<span class="tag">Cloud Computing</span>
+
+<br>
+
+<a class="certificate-link"
+href="https://drive.google.com/file/d/1MUdBtcGNOl_Uy9UEf5sYaWfiq1CmH_Dm/view?usp=drive_link"
+target="_blank">
+View Certificate
+</a>
+
+</div>
+
+<div class="internship-card">
+
+<h3>
+<a class="company-link"
+href="https://www.talenttrektechnologies.com"
+target="_blank">
+Artificial Intelligence Intern - TalentTrek
+</a>
+</h3>
+
+<p>
+Worked on AI concepts, data preprocessing and model development using Python.
+</p>
+
+<span class="tag">Artificial Intelligence</span>
+
+<br>
+
+<a class="certificate-link"
+href="https://drive.google.com/file/d/1lms_qmuhiC7rMl-6yf_dL4jBnxJKfKMJ/view?usp=drive_link"
+target="_blank">
+View Certificate
+</a>
+<a class="certificate-link"
+href="https://drive.google.com/file/d/1aBTV6EmLKPy6Sx6aHbsFPSxsI-Jqb5HN/view?usp=drive_link
+"
+target="_blank">
+View Certificate
+</a>
+
+</div>
+
+<div class="internship-card">
+
+<h3>
+<a class="company-link"
+href="https://skilldesire.com/"
+target="_blank">
+Full Stack Intern - Skill Desire
+</a>
+</h3>
+
+<p>
+Worked on frontend and backend web development using modern technologies and real-world projects.
+</p>
+
+<span class="tag">Full Stack</span>
+
+<br>
+
+<a class="certificate-link"
+href="https://drive.google.com/file/d/1RFVKmBXPoiTB5BwP3VtApzSp2uI7OwcW/view?usp=drive_link"
+target="_blank">
+View Certificate
+</a>
+
+</div>
+
+</div>
+
+<div class="arrow-container">
+<a href="projects.html" class="arrow"><i class="fas fa-arrow-left"></i></a>
+<a href="certifications.html" class="arrow"><i class="fas fa-arrow-right"></i></a>
+</div>
+
+<script>
+
+tsParticles.load("particles-js",{
+
+fullScreen:{enable:false},
+
+background:{
+color:{
+value:"transparent"
+}
+},
+
+particles:{
+
+number:{
+value:50
+},
+
+color:{
+value:"#3b82f6"
+},
+
+shape:{
+type:"circle"
+},
+
+opacity:{
+value:0.4
+},
+
+size:{
+value:3
+},
+
+move:{
+enable:true,
+speed:2,
+outModes:{
+bounce:"bounce"
+}
+},
+
+links:{
+enable:true,
+distance:120,
+color:"#a0aec0",
+opacity:.3
+}
+
+},
+
+interactivity:{
+
+events:{
+onHover:{
+enable:true,
+mode:"repulse"
+}
+},
+
+modes:{
+repulse:{
+distance:100
+}
+}
+
+}
+
+});
+
+</script>
+
+</body>
+</html>

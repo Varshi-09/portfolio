@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+  <link rel="stylesheet" href="about.css">
+
+<style>
+
+  * {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+/* STORY SECTION */
+.story-section {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-line {
+  position: absolute;
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+  text-align: center;
+  max-width: 80%;
+}
+
+.story-line.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CHAT SECTION */
+.chat-section {
+  padding: 4rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.chat {
+  max-width: 65%;
+  padding: 10px 14px;
+  margin: 12px 0;
+  border-radius: 18px;
+  line-height: 1.6;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.chat.you {
+  background: #1e293b;
+  margin-right: auto;
+}
+
+.chat.me {
+  background: #2563eb;
+  margin-left: auto;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .chat {
+    max-width: 90%;
+  }
+  @media (max-width: 600px) {
+  .story-line {
+    font-size: 1.1rem;
+  }
+
+  .chat {
+    max-width: 85%;
+    font-size: 0.9rem;
+  }
+}
+
+}
+</style>
+</head>
+<body>
+
+<!-- STORY SCROLL SECTION -->
+<section class="story-section">
+  <div class="story-line active">I believe curiosity is my biggest strength.</div>
+  <div class="story-line">I enjoy learning, creating, and improving every day.</div>
+  <div class="story-line">Challenges motivate me more than comfort.</div>
+  <div class="story-line">Growth matters to me — personally and professionally.</div>
+</section>
+
+<!-- CONVERSATION SECTION -->
+<section class="chat-section">
+  <div class="chat you">What defines me?</div>
+  <div class="chat me">Adaptability, communication, and a strong learning mindset.</div>
+
+  <div class="chat you">What do I enjoy doing?</div>
+  <div class="chat me">Exploring new ideas, sketching, staying active, and learning continuously.</div>
+
+  <div class="chat you">How do I approach challenges?</div>
+  <div class="chat me">I treat them as opportunities to grow and improve.</div>
+</section>
+<script>
+    const lines = document.querySelectorAll('.story-line');
+    let index = 0;
+
+    window.addEventListener('wheel', (e) => {
+      if (e.deltaY > 0 && index < lines.length - 1) {
+        lines[index].classList.remove('active');
+        index++;
+        lines[index].classList.add('active');
+      }
+      if (e.deltaY < 0 && index > 0) {
+        lines[index].classList.remove('active');
+        index--;
+        lines[index].classList.add('active');
+      }
+    });
+  </script>
+
+<script src="about.js"></script>
+</body>
+</html>

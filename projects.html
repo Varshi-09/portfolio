@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Bhagya Varshini</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #e0eafc, #cfdef3);
+      color: #333;
+      margin: 0;
+      position: relative;
+      overflow-x: hidden;
+    }
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    nav {
+      background: linear-gradient(to right, #3b82f6, #60a5fa);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    .nav-links a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      position: relative;
+    }
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #facc15;
+      border-radius: 2px;
+    }
+    .nav-links a:hover {
+      color: #facc15;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 2rem 0 1rem;
+      color: #0340a1;
+    }
+    .projects-section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .project-card {
+      flex: 1 1 300px;
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card h3 {
+      color: #3b82f6;
+      margin-bottom: 0.5rem;
+    }
+    .project-card p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .tag {
+      background: #e0f2fe;
+      color: #0284c7;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      font-size: 0.8rem;
+    }
+    @media (max-width: 768px) {
+      .project-card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+  <!-- ✅ Updated CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+  .arrow-container.below-nav {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 2rem;
+    z-index: 1;
+  }
+  .arrow {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0 0.4rem;
+    text-decoration: none;
+    color: #3b82f6;
+    background: #e0f2ff;
+    padding: 0.4rem 0.6rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .arrow:hover {
+    color: #facc15;
+    background: #3b82f6;
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+</style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <nav>
+    <div><strong>BHAGYA VARSHINI DANGETI</strong></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="internships.html">Internships</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <h1>My Projects</h1>
+  <div class="projects-section">
+    <div class="project-card">
+      <a href="portfolio/index.html" target="_blank" style="text-decoration: none; color: inherit;">
+        <h3>Portfolio Website</h3>
+        <p>A responsive and personal portfolio website to showcase my projects and skills using HTML, CSS, and JavaScript.</p>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </a>
+    </div>
+    <div class="project-card">
+      <a href="https://varshi-09.github.io/Weather-app/" target="_blank" style="text-decoration: none; color: inherit;">
+        <h3>Weather App</h3>
+        <p>An interactive web application to fetch real-time weather data using OpenWeatherMap API and display it beautifully.</p>
+        <div class="tags">
+          <span class="tag">API</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Bootstrap</span>
+        </div>
+      </a>
+    </div>
+    <div class="project-card">
+      <a href="task-manager/index.html" target="_blank" style="text-decoration: none; color: inherit;">
+        <h3>Task Manager</h3>
+        <p>A full-stack application to manage daily tasks with features like login, CRUD operations, and persistent storage.</p>
+        <div class="tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">MongoDB</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    tsParticles.load("particles-js", {
+      fullScreen: { enable: false },
+      background: { color: { value: "transparent" } },
+      particles: {
+        number: { value: 50 },
+        color: { value: "#3b82f6" },
+        shape: { type: "circle" },
+        opacity: { value: 0.4 },
+        size: { value: 3 },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          outModes: "bounce"
+        },
+        links: {
+          enable: true,
+          distance: 120,
+          color: "#a0aec0",
+          opacity: 0.3,
+          width: 1
+        }
+      },
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: "repulse" }
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 }
+        }
+      }
+    });
+  </script>
+
+  <div class="arrow-container below-nav">
+    <a href="skills.html" class="arrow"><i class="fas fa-arrow-left"></i></a>
+    <a href="internships.html" class="arrow"><i class="fas fa-arrow-right"></i></a>
+  </div>
+
+</body>
+</html>

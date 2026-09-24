@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills - Bhagya Varshini</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #e0eafc, #cfdef3);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: linear-gradient(to right, #3b82f6, #60a5fa);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #facc15;
+      border-radius: 2px;
+    }
+
+    .nav-links a:hover {
+      color: #facc15;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 2.5rem;
+      color: #0340a1;
+    }
+
+    .quote-typing {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 2rem;
+      color: #0340a1;
+      font-weight: 600;
+    }
+
+    .section {
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      width: 90%;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .section.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .skill-card {
+      text-align: center;
+      padding: 1rem;
+      border-radius: 10px;
+      background: #f9f9f9;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      background: #e6f7ff;
+    }
+
+    .skill-card img, .skill-card i {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .skill-card a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+    }
+
+    #loader {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 9999;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #ccc;
+      border-top-color: #00ccff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<!-- ✅ Updated CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+  .arrow-container.below-nav {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 2rem;
+    z-index: 1;
+  }
+  .arrow {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0 0.4rem;
+    text-decoration: none;
+    color: #3b82f6;
+    background: #e0f2ff;
+    padding: 0.4rem 0.6rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .arrow:hover {
+    color: #facc15;
+    background: #3b82f6;
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+</style>
+  
+</head>
+<body>
+
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<nav>
+  <div><strong>BHAGYA VARSHINI DANGETI</strong></div>
+  <div class="nav-links">
+    <a href="index.html" target="_blank">Home</a>
+    <a href="about.html" target="_blank">About</a>
+    <a href="skills.html" class="active">Skills</a>
+    <a href="projects.html" target="_blank">Projects</a>
+    <a href="internships.html" target="_blank">Internships</a>
+    <a href="certifications.html" target="_blank">Certifications</a>
+    <a href="contact.html" target="_blank">Contact</a>
+  </div>
+</nav>
+
+<h1>My Skills</h1>
+
+
+<!-- Programming Languages -->
+<div class="section fade-in">
+  <h2>💻 Programming Languages</h2>
+  <p>Programming languages are the backbone of all software development. Learning programming languages has empowered me to understand how software systems work, build creative projects, and solve real-world problems with technology.</p>
+  <div class="skills-grid">
+    <div class="skill-card"><a href="https://www.geeksforgeeks.org/c-programming-language/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"><h3>C</h3></a></div>
+    <div class="skill-card"><a href="https://www.geeksforgeeks.org/c-plus-plus/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"><h3>C++</h3></a></div>
+    <div class="skill-card"><a href="https://www.geeksforgeeks.org/java/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"><h3>Java</h3></a></div>
+    <div class="skill-card"><a href="https://www.w3schools.com/python/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><h3>Python</h3></a></div>
+    <div class="skill-card"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"><h3>JavaScript</h3></a></div>
+    <div class="skill-card"><a href="https://www.w3schools.com/sql/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"><h3>SQL</h3></a></div>
+  </div>
+</div>
+<div class="quote-typing" id="quote"></div>
+
+<!-- Tools & Technologies -->
+<div class="section fade-in">
+  <h2>🛠️ Tools & Technologies</h2>
+  <p>These tools support my workflow for front-end development, version control, and UI design. I actively work with a variety of tools and technologies that enhance productivity, streamline workflows, and support project development. My toolbox includes:</p>
+  <div class="skills-grid">
+    <div class="skill-card"><a href="https://www.w3schools.com/html/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><h3>HTML</h3></a></div>
+    <div class="skill-card"><a href="https://www.w3schools.com/css/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"><h3>CSS</h3></a></div>
+    <div class="skill-card"><a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"><h3>Bootstrap</h3></a></div>
+    <div class="skill-card"><a href="https://git-scm.com/doc" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"><h3>Git</h3></a></div>
+    <div class="skill-card"><a href="https://docs.github.com/en" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><h3>GitHub</h3></a></div>
+  </div>
+</div>
+
+<!-- Soft Skills -->
+<div class="quote-typing" id="quote2"></div>
+<div class="section fade-in">
+  <h2>🌟 Soft Skills</h2>
+  <p>Alongside technical expertise, I believe soft skills are crucial for effective teamwork and personal growth. These skills help me communicate ideas clearly, adapt to challenges, and contribute positively in collaborative environments. My core soft skills include:</p>
+  <div class="skills-grid">
+    <div class="skill-card"><a href="https://www.skillsyouneed.com/ips/communication-skills.html" target="_blank"><i class="fas fa-comments fa-2x"></i><h3>Communication</h3></a></div>
+    <div class="skill-card"><a href="https://www.skillsyouneed.com/ips/team-working.html" target="_blank"><i class="fas fa-users fa-2x"></i><h3>Teamwork</h3></a></div>
+    <div class="skill-card"><a href="https://www.skillsyouneed.com/ps/creativity-skills.html" target="_blank"><i class="fas fa-lightbulb fa-2x"></i><h3>Creativity</h3></a></div>
+    <div class="skill-card"><a href="https://www.skillsyouneed.com/ps/concentration.html" target="_blank"><i class="fas fa-bullseye fa-2x"></i><h3>Focus</h3></a></div>
+    <div class="skill-card"><a href="https://www.skillsyouneed.com/lead/" target="_blank"><i class="fas fa-handshake fa-2x"></i><h3>Leadership</h3></a></div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("load", () => {
+    document.getElementById("loader").style.display = "none";
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
+  });
+
+  const quotes = [
+    `"Skill is the unified force of experience, intellect and passion." – John Ruskin`,
+    `"Learning never exhausts the mind." – Leonardo da Vinci`,
+    `"Good programmers write code that humans can understand." – Martin Fowler`,
+    `"Success in tech is solving problems creatively and collaboratively."`
+  ];
+  const quoteElem = document.getElementById('quote');
+  const quote2Elem = document.getElementById('quote2');
+  let j = 0, current = 0, isDeleting = false;
+
+  function typeQuote() {
+    const full = quotes[current];
+    const visible = full.substring(0, j);
+    quoteElem.textContent = visible;
+    quote2Elem.textContent = visible;
+
+    if (!isDeleting) {
+      if (j < full.length) {
+        j++;
+        setTimeout(typeQuote, 50);
+      } else {
+        isDeleting = true;
+        setTimeout(typeQuote, 2000);
+      }
+    } else {
+      if (j > 0) {
+        j--;
+        setTimeout(typeQuote, 30);
+      } else {
+        isDeleting = false;
+        current = (current + 1) % quotes.length;
+        setTimeout(typeQuote, 1000);
+      }
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", typeQuote);
+</script>
+<div class="arrow-container below-nav">
+  <a href="about.html" class="arrow"><i class="fas fa-arrow-left"></i></a>
+  <a href="projects.html" class="arrow"><i class="fas fa-arrow-right"></i></a>
+</div>
+
+
+</body>
+</html>

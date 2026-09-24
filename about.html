@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Bhagya Varshini</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+ body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #d9e4f5, #ebedee);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  position: relative;
+  color: #2d2d2d;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.3), transparent 70%);
+  border-radius: 50%;
+  z-index: -2;
+  filter: blur(60px);
+  animation: floatBlob 15s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: "";
+  position:fixed;
+  bottom: -150px;
+  right: -150px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle at center, rgba(128,191,255,0.3), transparent 70%);
+  border-radius: 50%;
+  z-index: -2;
+  filter: blur(80px);
+  animation: floatBlob 18s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatBlob {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-30px) scale(1.1); }
+}
+
+
+
+    nav {
+      background: linear-gradient(to right, #3b82f6, #60a5fa);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+
+    .nav-links a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #facc15;
+      border-radius: 2px;
+    }
+
+    .nav-links a:hover {
+      color: #facc15;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 2rem 0 1rem;
+      color: #0340a1;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      max-width: 1200px;
+      margin-bottom: 0;
+      padding-bottom: 0;    
+    }
+
+    .about-text {
+      flex: 1 1 700px;
+      padding: 1rem;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .typed-about {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1d4ed8; /* Nice standout blue */
+  white-space: nowrap;
+  display: inline-block;
+  border-right: 2px solid #1d4ed8;
+}
+.typing-text.finished {
+  border-right: none;
+  animation: none;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: auto; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+@keyframes blink {
+      50% { border-color: transparent }
+    }
+.info-boxes {
+      margin: 2rem auto;
+      padding: 0 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      max-width: 1200px;
+    }
+
+    .info-box {
+      flex: 1 1 250px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .info-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-box i {
+      font-size: 2rem;
+      color: #3b82f6;
+      margin-bottom: 0.5rem;
+    }
+
+    .chatbot-icon {
+      position: fixed;
+      top: 100px;
+      right: 20px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      cursor: pointer;
+      animation: pulse 2s infinite;
+      z-index: 1001;
+    }
+
+    @media (max-width: 768px) {
+      .chatbot-icon {
+        top: auto;
+        bottom: 20px;
+        right: 15px;
+      }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(59,130,246, 0.7); }
+      70% { transform: scale(1.05); box-shadow: 0 0 20px 10px rgba(59,130,246, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(59,130,246, 0); }
+    }
+
+    .chatbot-box {
+      position: fixed;
+      top: 110px;
+      right: 20px;
+      width: 280px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      display: none;
+      flex-direction: column;
+      font-size: 0.9rem;
+      z-index: 1000;
+      border: 2px solid #3b82f6;
+    }
+
+    .chat-log {
+      height: 140px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 8px;
+      background: #f9f9f9;
+      margin-bottom: 10px;
+    }
+
+    .chatbot-box input {
+      width: calc(100% - 44px);
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .chatbot-box .row {
+      display: flex;
+      gap: 6px;
+    }
+
+    .chatbot-box button {
+      padding: 10px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .chatbot-box button:hover {
+      background-color: #2563eb;
+    }
+  </style>
+  <!-- ✅ Updated CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+  .arrow-container.below-nav {
+    position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 0.6rem;
+  z-index: 999;
+  }
+  .arrow {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0 0.4rem;
+    text-decoration: none;
+    color: #3b82f6;
+    background: #e0f2ff;
+    padding: 0.4rem 0.6rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .arrow:hover {
+    color: #facc15;
+    background: #3b82f6;
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+
+.resume-assistant{
+    margin:0;
+    padding:0;
+}
+
+.assistant-img {
+  width: 100px;
+  height: auto;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.assistant-img:hover {
+  transform: scale(1.05);
+}
+
+.resume-popup {
+  display: none;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  padding: 1rem 1.2rem;
+  border: 2px solid #0f62fe;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: riseFade 0.4s ease-out;
+  z-index: 10;
+}
+
+.resume-popup p {
+  margin: 0 0 0.5rem;
+  color: #0f3069;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.resume-download-button {
+  background-color: #0f62fe;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.resume-download-button:hover {
+  background-color: #0041c4;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(15, 98, 254, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(15, 98, 254, 0.6);
+  }
+}
+
+@keyframes riseFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.resume-bell {
+  width: 80px;
+  height: 80px;
+  background: #0f62fe;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 2.2rem;
+  animation: bell-shake 2s infinite;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.resume-bell:hover {
+  transform: scale(1.05);
+}
+
+@keyframes bell-shake {
+  0% { transform: rotate(0); }
+  10% { transform: rotate(15deg); }
+  20% { transform: rotate(-15deg); }
+  30% { transform: rotate(10deg); }
+  40% { transform: rotate(-10deg); }
+  50% { transform: rotate(5deg); }
+  60% { transform: rotate(-5deg); }
+  70% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.resume-bell {
+  width: 80px;
+  height: 80px;
+  background: #0f62fe;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 2.2rem;
+  animation: bell-shake 2s infinite ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(15, 98, 254, 0.3);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-bell:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 30px rgba(15, 98, 254, 0.6);
+}
+
+.resume-bell:active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: ripple 0.4s ease-out;
+  pointer-events: none;
+}
+
+@keyframes bell-shake {
+  0% { transform: rotate(0); }
+  10% { transform: rotate(15deg); }
+  20% { transform: rotate(-15deg); }
+  30% { transform: rotate(10deg); }
+  40% { transform: rotate(-10deg); }
+  50% { transform: rotate(5deg); }
+  60% { transform: rotate(-5deg); }
+  70% { transform: rotate(0); }
+  100% { transform: rotate(0); }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes glowingPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(15, 98, 254, 0.3), inset 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(15, 98, 254, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(15, 98, 254, 0.3), inset 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.animated-glow {
+  animation: glowingPulse 2.5s infinite ease-in-out;
+}
+
+.resume-popup.slide-in {
+  animation: slideFade 0.4s ease-out;
+}
+
+@keyframes slideFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.resume-bell {
+  width: 50px;
+  height: 50px;
+  background: #0f62fe;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1.3rem;
+    margin-bottom: 0;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(15, 98, 254, 0.5);
+  animation: bell-float 3s ease-in-out infinite, glowingPulse 2.5s ease-in-out infinite;
+  position: relative;
+  transition: transform 0.3s ease;
+  overflow: visible;
+}
+
+.resume-bell:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(15, 98, 254, 0.8);
+}
+
+.resume-bell i {
+  animation: bell-ring 2s infinite ease-in-out;
+  transform-origin: top center;
+}
+/* Remove harsh edge rings */
+.resume-bell::before,
+.resume-bell::after {
+  content: none !important;
+}
+/* Soft float animation */
+@keyframes bell-float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+/* Soft glowing pulse */
+@keyframes glowingPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(15, 98, 254, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(15, 98, 254, 0.7);
+  }
+}
+/* Actual bell swing */
+@keyframes bell-ring {
+  0% { transform: rotate(0); }
+  10% { transform: rotate(15deg); }
+  20% { transform: rotate(-15deg); }
+  30% { transform: rotate(10deg); }
+  40% { transform: rotate(-10deg); }
+  50% { transform: rotate(5deg); }
+  60% { transform: rotate(-5deg); }
+  70% { transform: rotate(0); }
+  100% { transform: rotate(0); }
+}
+/* Make Resume Bell float like chatbot */
+.resume-bell {
+  position: fixed !important;
+  top: 200px;   /* adjust if needed */
+  right: 20px;
+  margin: 0 !important;
+  z-index: 1001;
+}
+
+/* Position popup properly */
+.resume-popup {
+  position: fixed !important;
+  top: 290px;   /* slightly below bell */
+  right: 20px;
+}
+.edu-timeline {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.edu-timeline::-webkit-scrollbar {
+  height: 6px;
+}
+.edu-timeline::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 3px;
+}
+/* Horizontal connecting line */
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  right: 2rem;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #facc15);
+  z-index: 0;
+  transform: translateY(-50%);
+  border-radius: 2px;
+}
+.timeline-item {
+  flex: 0 0 200px;
+  background: white;
+  border-radius: 12px;
+  clip-path: polygon(0 10%, 0 90%, 10% 100%, 90% 100%, 100% 90%, 100% 10%, 90% 0%, 10% 0%);
+  padding: 0.8rem;
+  text-align: center;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+/* Alternate vertical offset */
+.timeline-item:nth-child(odd) { top: -10px; }
+.timeline-item:nth-child(even) { top: 10px; }
+.timeline-item:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+/* Timeline icon */
+.timeline-icon {
+  width: 50px;
+  height: 50px;
+  background: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s, transform 0.3s;
+}
+.timeline-item:hover .timeline-icon {
+  background: #facc15;
+  transform: scale(1.1);
+}
+/* Timeline content */
+.timeline-content h4 {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #0340a1;
+}
+.timeline-content span {
+  font-size: 0.8rem;
+  color: #555;
+}
+.timeline-content p {
+  margin: 0.3rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+/* CHAT SECTION STYLING */
+.chat {
+  max-width: 60%;              /* slightly smaller width */
+  padding: 10px 14px;          /* reduced padding */
+  margin: 10px 0;
+  border-radius: 16px;
+  line-height: 1.5;
+  font-size: 0.9rem;           /* smaller text */
+  animation: fadeUp 0.5s ease forwards;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3); /* subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;             /* makes it feel interactive */
+}
+/* Question (you) styling */
+.chat.you {
+  background: #334155;         /* dark blue-gray */
+  color: #f8fafc;              /* light text */
+  margin-right: auto;
+  border-left: 4px solid #60a5fa; /* subtle accent */
+}
+/* Answer (me) styling */
+.chat.me {
+  background: #60a5fa;         /* vibrant blue */
+  color: #0f172a;              /* dark text */
+  margin-left: auto;
+  border-right: 4px solid #1e293b; /* subtle accent */
+}
+/* Hover effect for interactivity */
+.chat:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  background: #3b82f6; /* slightly brighter on hover for both */
+}
+/* Animation for fade-up appearance */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* INTERACTIVE Q&A FOR HOBBIES / QUESTIONS */
+.qa {
+  margin: 12px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #1e293b; /* dark base */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.qa .question {
+  padding: 12px 16px;
+  font-size: 0.95rem;      /* smaller text */
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #334155;      /* darker question box */
+  color: #f8fafc;
+  transition: background 0.3s ease;
+  border-left: 4px solid #60a5fa; /* accent line */
+}
+.qa:hover .question {
+  background: #475569;       /* hover effect */
+}
+.qa .question::after {
+  content: "▼";              /* arrow indicator */
+  transition: transform 0.3s ease;
+}
+.qa .answer {
+  max-height: 0;
+  padding: 0 16px;
+  font-size: 0.9rem;
+  color: #f1f5f9;
+  background: #1e293b;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+.qa.active .answer {
+  max-height: 200px;          /* adjust based on content */
+  padding: 12px 16px;
+}
+.qa.active .question::after {
+  transform: rotate(180deg);  /* arrow rotates */
+}
+/* Optional: small lift animation on hover */
+.qa:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+}
+.floating-keywords {
+  position: relative;
+  inset:0;
+  pointer-events: none;
+  z-index:1;
+  overflow:visible;
+  width: 100%;
+  min-height: 80px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.word {
+  position: relative;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #374151;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  animation: float 6s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Different floating delays */
+.word:nth-child(1) { animation-delay: 0s; }
+.word:nth-child(2) { animation-delay: 1s; }
+.word:nth-child(3) { animation-delay: 2s; }
+.word:nth-child(4) { animation-delay: 3s; }
+.word:nth-child(5) { animation-delay: 4s; }
+.word:nth-child(6) { animation-delay: 5s; }
+.floating-keywords span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.floating-keywords span:nth-child(2) { left: 30%; animation-delay: 2s; }
+.floating-keywords span:nth-child(3) { left: 50%; animation-delay: 4s; }
+.floating-keywords span:nth-child(4) { left: 70%; animation-delay: 6s; }
+.floating-keywords span:nth-child(5) { left: 85%; animation-delay: 8s; }
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+@keyframes floatWords {
+  from {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-10vh);
+    opacity: 1;
+  }
+}
+
+/* Hover effect */
+.word:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  animation-play-state: paused;
+}
+
+/* Tooltip meaning */
+.word::after {
+  content: attr(data-meaning);
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.word:hover::after {
+  opacity: 1;
+}
+html, body{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:linear-gradient(135deg,#d9e4f5,#ebedee);
+    overflow-x:hidden;
+}
+.chat-section{
+    margin-bottom:20px;
+}
+
+.floating-keywords{
+    margin:30px auto;
+}
+
+.resume-assistant{
+    height:0;
+}
+</style>
+ <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+  <nav>
+    <div><strong>BHAGYA VARSHINI DANGETI</strong></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="internships.html">Internships</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <h1>About Me</h1>
+<div class="about-container">
+    <div class="about-text">
+      <p><span class="typed-about"></span></p>
+      <p>A passionate Computer Science and Engineering student from Rajamahendri Institute of Engineering and Technology. I enjoy turning ideas into real-world solutions, especially through web development and Python programming.
+      I’ve had hands-on experience through internships where I built responsive websites, worked with cloud tools, and even explored the exciting world of AI. </p> 
+    </div>
+  </div>
+
+<h2 style="text-align:center; margin-top:0.0rem; color:#0340a1;">My Education</h2>
+
+<div class="edu-timeline">
+  <div class="timeline-line"></div>
+   <div class="timeline-item">
+    <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+    <div class="timeline-content">
+      <h4>B.Tech in CSE</h4>
+      <span>2022-2026</span>
+      <a href="https://www.rietrjy.co.in/"style="text-decoration:none;"><p style="color:#f97316;">Rajamahendri Institute of Engineering and Technology</p></a>
+    </div>
+  </div>
+<div class="timeline-item">
+    <div class="timeline-icon"><i class="fas fa-school"></i></div>
+    <div class="timeline-content">
+      <h4>Intermediate</h4>
+      <span>2020-2022</span>
+      <a href="https://aksharasri.com/"style="text-decoration:none;"><p style="color:#f97316;">Pragati Junior College</p></a>
+    </div>
+  </div>
+<div class="timeline-item">
+    <div class="timeline-icon"><i class="fas fa-book-reader"></i></div>
+    <div class="timeline-content">
+      <h4>Secondary School</h4>
+      <span>2019-2020</span>
+      <a href="https://aksharasri.com/"style="text-decoration:none;"><p style="color:#f97316;">Akshara sri smart School</p></a>
+    </div>
+  </div>
+</div>
+  
+<img src="robo.jpeg" alt="Chatbot Icon" class="chatbot-icon" onclick="toggleChatbot()" title="Ask Varshini’s Bot" />
+
+  <div class="chatbot-box" id="chatbotBox">
+    <strong>🤖 Ask Varshini’s Bot</strong>
+    <div class="chat-log" id="chatLog"></div>
+    <div class="row">
+      <input id="userQuestion" type="text" placeholder="Ask anything...">
+      <button onclick="startVoice()" title="Speak"><i class="fas fa-microphone"></i></button>
+    </div>
+    <button onclick="askGPT()">Ask</button>
+  </div>
+
+  <script>
+  function toggleChatbot() {
+    const bot = document.getElementById("chatbotBox");
+    bot.style.display = bot.style.display === "flex" ? "none" : "flex";
+  }
+
+  function speak(text) {
+    const msg = new SpeechSynthesisUtterance(text);
+    msg.lang = "en-US";
+    window.speechSynthesis.speak(msg);
+  }
+
+  async function askGPT() {
+    const input = document.getElementById("userQuestion");
+    const chatLog = document.getElementById("chatLog");
+    const question = input.value.trim();
+    if (!question) return;
+
+    input.value = '';
+    chatLog.innerHTML += `<div><strong>You:</strong> ${question}</div>`;
+    chatLog.innerHTML += `<div><strong>Bot:</strong> ⏳ Loading, please wait...</div>`;
+    chatLog.scrollTop = chatLog.scrollHeight;
+
+    try {
+      const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+                    "HTTP-Referer": "https://your-portfolio-url.com", // update to your live site if hosted
+          "X-Title": "Portfolio Chatbot"
+        },
+        body: JSON.stringify({
+          model: "openai/gpt-3.5-turbo",
+          messages: [
+            { role: "system", content: "You are a friendly chatbot that introduces Bhagya Varshini and answers questions about her as a CSE student." },
+            { role: "user", content: question }
+          ]
+        })
+      });
+
+      const data = await response.json();
+      let answer = "⚠️ Something went wrong.";
+      if (data.choices && data.choices[0]?.message?.content) {
+        answer = data.choices[0].message.content;
+      } else if (data.error?.message) {
+        answer = "⚠️ Error: " + data.error.message;
+      }
+
+      chatLog.innerHTML += `<div><strong>Bot:</strong> ${answer}</div>`;
+      chatLog.scrollTop = chatLog.scrollHeight;
+      speak(answer);
+    } catch (error) {
+      console.error("❌ Fetch error:", error);
+      chatLog.innerHTML += `<div><strong>Bot:</strong> ⚠️ Could not reach OpenRouter API.</div>`;
+    }
+  }
+
+  function startVoice() {
+    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    recognition.lang = 'en-US';
+    recognition.start();
+    recognition.onresult = function(event) {
+      document.getElementById('userQuestion').value = event.results[0][0].transcript;
+      askGPT();
+    };
+  }
+  </script>
+<!-- ✅ about.html -->
+<div class="arrow-container below-nav">
+  <a href="index.html" class="arrow"><i class="fas fa-arrow-left"></i></a>
+  <a href="skills.html" class="arrow"><i class="fas fa-arrow-right"></i></a>
+</div>
+ <script>
+  function triggerResumePopup() {
+  const popup = document.getElementById('resumePopup');
+  popup.style.display = 'block';
+
+  const bell = document.querySelector('.resume-bell');
+  bell.style.animation = 'none'; // stop shaking
+  bell.classList.remove("animated-glow"); // stop glowing
+  setTimeout(() => {
+    popup.style.display = 'none';
+  }, 4000);
+
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  const typedAbout = new Typed(".typed-about", {
+    strings: ["hey all, I'm varshini"],
+    typeSpeed: 60,
+    showCursor: false,
+    cursorChar: "|",
+    loop: false,
+    onComplete: () => {
+      // remove the cursor after a delay
+      setTimeout(() => {
+        document.querySelector(".typed-about").style.borderRight = "none";
+      }, 300); // wait just a bit after typing ends
+    }
+  });
+
+// Scroll Animation for Hobbies Story
+const hobbyLines = document.querySelectorAll('.hobbies-section .story-line');
+let hobbyIndex = 0;
+
+window.addEventListener('wheel', (e) => {
+  if (hobbyLines.length === 0) return;
+
+  if (e.deltaY > 0 && hobbyIndex < hobbyLines.length - 1) {
+    hobbyLines[hobbyIndex].classList.remove('active');
+    hobbyIndex++;
+    hobbyLines[hobbyIndex].classList.add('active');
+  }
+  if (e.deltaY < 0 && hobbyIndex > 0) {
+    hobbyLines[hobbyIndex].classList.remove('active');
+    hobbyIndex--;
+    hobbyLines[hobbyIndex].classList.add('active');
+  }
+});
+
+
+
+</script>
+<div class="decorative-shapes">
+  <div class="shape shape1"></div>
+  <div class="shape shape2"></div>
+  <div class="shape shape3"></div>
+</div>
+<!-- INTERACTIVE CHAT ABOUT HOBBIES -->
+<section class="chat-section">
+  <div class="qa">
+    <div class="question">What's your favorite creative outlet?</div>
+    <div class="answer">Sketching and digital art — I love expressing ideas visually!</div>
+  </div>
+
+  <div class="qa">
+    <div class="question">How do you stay active?</div>
+    <div class="answer">Daily yoga, workouts, and occasional hikes keep me energized.</div>
+  </div>
+  <div class="qa">
+    <div class="question">How do you spend your free time?</div>
+    <div class="answer">Reading, exploring podcasts, and learning something new every day.</div>
+  </div>
+</section>
+<div class="resume-assistant" >
+  <div class="resume-bell" onclick="triggerResumePopup()" title="Click to download resume">
+    <i class="fas fa-bell"></i>
+  
+<div class="resume-popup" id="resumePopup">
+    <p>🚀 My resume is ready to launch!</p>
+    <a href="C:\Users\DELL\OneDrive\Desktop\apps\portfolio\portfolio_site\resume.pdf" download class="resume-download-button">Download Resume</a>
+  </div>
+ 
+  </div> 
+   </div>
+  <div class="floating-keywords">
+  <div class="word" data-meaning="Focused and committed to goals">Discipline</div>
+  <div class="word" data-meaning="Improving steadily every day">Consistency</div>
+  <div class="word" data-meaning="Breaking problems into clear solutions">Problem Solving</div>
+  <div class="word" data-meaning="Always open to learning and growth">Learning Mindset</div>
+  <div class="word" data-meaning="Thinking logically and systematically">Engineering Thinking</div>
+  <div class="word" data-meaning="Focused on long-term improvement">Growth-Oriented</div>
+</div>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const qas = document.querySelectorAll('.qa');
+  qas.forEach(q => {
+    const question = q.querySelector('.question');
+    question.addEventListener('click', () => {
+      q.classList.toggle('active');
+    });
+  });
+});
+</script>
+</body>
+</html>
